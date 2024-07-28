@@ -41,6 +41,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.hamcrest)
     implementation(libs.hamcrest.library)
+    implementation(libs.androidx.espresso.core)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
