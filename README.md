@@ -18,15 +18,29 @@ allprojects {
 Add the dependency.
 ```
 dependencies {
-    androidTestImplementation 'com.github.babykazunoko:espresso-matcher-extensions:1.0'
+    androidTestImplementation 'com.github.babykazunoko:espresso-matcher-extensions:1.1'
 }
 ```
 
 ## Usage
+### `withIndex`
 Use the withIndex method to select a specific view by its index among multiple views of the same type in your tests.
 
 ```
 onView(EspressoMatcherExtensions.withIndex(withText("sample")))
+            .check(matches(isDisplayed()))
+```
+
+### `withTextContaining`
+Use the withTextContaining method to select specific views that partially match the specified string.
+
+```
+onView(EspressoMatcherExtensions.withTextContaining("sample"))
+            .check(matches(isDisplayed()))
+```
+
+```
+onView(EspressoMatcherExtensions.withTextContaining(R.string.sample))
             .check(matches(isDisplayed()))
 ```
 
