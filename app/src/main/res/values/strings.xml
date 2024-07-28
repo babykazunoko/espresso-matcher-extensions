@@ -3,4 +3,5 @@
 
     <!-- MainActivity -->
     <string name="activity_main_with_index_value">SAMPLE</string>
+    <string name="activity_main_with_text_containing_value">espresso-matcher</string>
 </resources>

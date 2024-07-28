@@ -24,4 +24,16 @@ class MainActivityTest {
         onView(EspressoMatcherExtensions.withIndex(withText(R.string.activity_main_with_index_value)))
             .check(matches(isDisplayed()))
     }
+
+    @Test
+    fun withTextContainingStringTest() {
+        onView(EspressoMatcherExtensions.withTextContaining("espresso-matcher"))
+            .check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun withTextContainingStringResourceTest() {
+        onView(EspressoMatcherExtensions.withTextContaining(R.string.activity_main_with_text_containing_value))
+            .check(matches(isDisplayed()))
+    }
 }
